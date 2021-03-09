@@ -1,10 +1,10 @@
 /**
  * Clear remaining BrowserViews from previous instances
  */
-import { remote } from 'electron';
+import { BrowserView } from 'electron';
 
 const removeViews = () => {
-  const views = remote.BrowserView.getAllViews();
+  const views = BrowserView.getAllViews();
   views.forEach(view => view.destroy());
 };
 

@@ -122,7 +122,7 @@ export const changableProps = {
 }
 
 export const webPreferences = [
-  'devTools', 'nodeIntegration', 'nodeIntegrationInWorker', 'nodeIntegrationInSubFrames', 'preload', 'sandbox', 'enableRemoteModule', 'session', 'partition', 'affinity', 'zoomFactor', 'javascript', 'webSecurity', 'allowRunningInsecureContent', 'images', 'textAreasAreResizable', 'webgl', 'plugins', 'experimentalFeatures', 'scrollBounce', 'enableBlinkFeatures', 'disableBlinkFeatures', 'standard', 'serif', 'sansSerif', 'monospace', 'cursive', 'fantasy', 'defaultFontSize', 'defaultMonospaceFontSize', 'minimumFontSize', 'defaultEncoding', 'backgroundThrottling', 'offscreen', 'contextIsolation', 'nativeWindowOpen', 'webviewTag', 'additionalArguments', 'safeDialogs', 'safeDialogsMessage', 'navigateOnDragDrop', 'autoplayPolicy', 'disableHtmlFullscreenWindowResize'
+  'devTools', 'nodeIntegration', 'nodeIntegrationInWorker', 'nodeIntegrationInSubFrames', 'preload', 'sandbox', 'session', 'partition', 'affinity', 'zoomFactor', 'javascript', 'webSecurity', 'allowRunningInsecureContent', 'images', 'textAreasAreResizable', 'webgl', 'plugins', 'experimentalFeatures', 'scrollBounce', 'enableBlinkFeatures', 'disableBlinkFeatures', 'standard', 'serif', 'sansSerif', 'monospace', 'cursive', 'fantasy', 'defaultFontSize', 'defaultMonospaceFontSize', 'minimumFontSize', 'defaultEncoding', 'backgroundThrottling', 'offscreen', 'contextIsolation', 'nativeWindowOpen', 'webviewTag', 'additionalArguments', 'safeDialogs', 'safeDialogsMessage', 'navigateOnDragDrop', 'autoplayPolicy', 'disableHtmlFullscreenWindowResize'
 ]
 
 // Events that should trigger an update of the BrowserView bounds
