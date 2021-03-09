@@ -9,16 +9,22 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import camelCase from 'lodash.camelcase'
-import { remote } from 'electron'
+import { BrowserView, BrowserWindow } from 'electron'
 import { changableProps, events, methods, props, webPreferences, resizeEvents, elementResizeEvents } from './constants'
 
-const win = remote.getCurrentWindow()
-
 export default class ElectronBrowserView extends Component {
+  winId = null;
+  win = null;
   view = null;
   track = false;
 
   componentDidMount () {
+    winId = this.props.windowId;
+    if (!winId) {
+      console.log("ElectronBrowserView:: componentDidMount: winId is required")
+      return
+    }
+    win = BrowserWindow.fromId(winId)
     const options = {
       webPreferences: this.props.webpreferences || {}
     }
@@ -32,7 +38,7 @@ export default class ElectronBrowserView extends Component {
       }
     })
 
-    this.view = new remote.BrowserView(options)
+    this.view = new BrowserView(options)
     win.addBrowserView(this.view)
     this.updateViewBounds()
     this.view.setAutoResize({
